@@ -1,2 +1,3 @@
 # USACO-
-This Repository contains my accepted solutions for USACO Guide Problems 
+This Repository contains my accepted solutions for USACO-Gold Problems
+
