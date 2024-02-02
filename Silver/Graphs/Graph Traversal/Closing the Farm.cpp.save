@@ -1,0 +1,45 @@
+#include <iostream> 
+#include <vector> 
+
+using namespace std;
+
+vector <int> v[3005];
+vector <bool> vis(3005,false);
+int c=0;
+
+void dfs(int node)
+{
+   c++;
+   vis[node]=true;
+   for(auto z:v[node])
+   {
+      if(!vis[z]) dfs(z);
+   }
+}
+int main()
+{
+   int n,m;
+   cin>>n>>m;
+   vector <bool> ope(n+1,true);
+   vector <int>  inc(n+1,0);
+   for(int i=0;i<n;i++)
+   {
+     int x,y;
+     cin>>x>>y;
+     v[x].push_back(y);
+     v[y].push_back(x);
+     inc[x]++;
+     inc[y]++;
+   }
+   dfs(1);
+   if(c==n) cout<<"YES\n";
+   else     cout<<"NO\n";
+   for(int i=1;i<=n;i++)
+   {
+     int b;cin>>b;
+     string ans="YES\n";
+    
+     open[b]=false;
+   }
+}
+
